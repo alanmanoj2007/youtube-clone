@@ -1,0 +1,140 @@
+.video-page {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 8px 0;
+}
+
+.video-page-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 16px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  border-radius: 8px;
+  transition: background-color var(--transition), color var(--transition);
+  background: transparent;
+}
+
+.video-page-back:hover {
+  background-color: var(--hover-bg);
+  color: var(--text-primary);
+}
+
+.video-page-thumbnail {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: var(--shadow-md);
+}
+
+.video-page-thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-page-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 10px;
+  line-height: 1.3;
+}
+
+.video-page-info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 16px;
+  gap: 8px;
+}
+
+.video-page-channel {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.video-page-channel-avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #cc0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 18px;
+  flex-shrink: 0;
+}
+
+.video-page-channel-name {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.video-page-stats {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+.video-page-stats .dot {
+  width: 3px;
+  height: 3px;
+  border-radius: 50%;
+  background-color: var(--text-muted);
+  display: inline-block;
+}
+
+.video-page-description {
+  background-color: var(--bg-secondary);
+  border-radius: var(--radius);
+  padding: 20px 22px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+  transition: background-color var(--transition);
+}
+
+@media (max-width: 768px) {
+  .video-page-title {
+    font-size: 20px;
+  }
+
+  .video-page-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+
+  .video-page-description {
+    padding: 16px 18px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .video-page-title {
+    font-size: 18px;
+  }
+
+  .video-page-back {
+    padding: 6px 12px;
+    font-size: 13px;
+  }
+}

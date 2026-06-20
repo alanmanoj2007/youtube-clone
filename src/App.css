@@ -1,0 +1,117 @@
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8f8f8;
+  --bg-sidebar: #ffffff;
+  --bg-card: #ffffff;
+  --text-primary: #0a0a0a;
+  --text-secondary: #606060;
+  --text-muted: #888888;
+  --border-color: #e5e5e5;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.06);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.08);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.12);
+  --hover-bg: rgba(0, 0, 0, 0.05);
+  --sidebar-width: 240px;
+  --navbar-height: 64px;
+  --radius: 12px;
+  --transition: 0.25s ease;
+  --font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+[data-theme='dark'] {
+  --bg-primary: #0f0f0f;
+  --bg-secondary: #1a1a1a;
+  --bg-sidebar: #0f0f0f;
+  --bg-card: #1a1a1a;
+  --text-primary: #f1f1f1;
+  --text-secondary: #aaaaaa;
+  --text-muted: #666666;
+  --border-color: #2a2a2a;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 8px 30px rgba(0, 0, 0, 0.5);
+  --hover-bg: rgba(255, 255, 255, 0.08);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background-color var(--transition), color var(--transition);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  font-family: inherit;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input {
+  font-family: inherit;
+  outline: none;
+  border: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.app-main {
+  display: flex;
+  margin-top: var(--navbar-height);
+  min-height: calc(100vh - var(--navbar-height));
+}
+
+.content {
+  flex: 1;
+  padding: 24px 32px 40px 32px;
+  background-color: var(--bg-primary);
+  transition: background-color var(--transition);
+  min-width: 0;
+}
+
+@media (max-width: 1024px) {
+  .content {
+    padding: 20px 20px 32px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 16px 14px 24px 14px;
+  }
+}

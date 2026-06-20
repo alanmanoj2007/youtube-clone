@@ -1,0 +1,121 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--navbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+  background-color: var(--bg-primary);
+  border-bottom: 1px solid var(--border-color);
+  z-index: 1000;
+  transition: background-color var(--transition), border-color var(--transition);
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.navbar-menu-btn {
+  display: none;
+  font-size: 22px;
+  padding: 6px 8px;
+  border-radius: 50%;
+  transition: background-color var(--transition);
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.navbar-menu-btn:hover {
+  background-color: var(--hover-bg);
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-primary);
+  cursor: pointer;
+  user-select: none;
+}
+
+.navbar-logo svg {
+  width: 30px;
+  height: 30px;
+}
+
+.navbar-logo span {
+  letter-spacing: -0.5px;
+}
+
+.navbar-center {
+  flex: 1;
+  max-width: 640px;
+  margin: 0 24px;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.navbar-theme-toggle {
+  padding: 8px 10px;
+  border-radius: 50%;
+  font-size: 20px;
+  transition: background-color var(--transition);
+  background: transparent;
+  color: var(--text-primary);
+}
+
+.navbar-theme-toggle:hover {
+  background-color: var(--hover-bg);
+}
+
+.navbar-avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: #cc0000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  font-size: 15px;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    padding: 0 12px;
+  }
+
+  .navbar-menu-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar-center {
+    margin: 0 8px;
+    max-width: 280px;
+  }
+
+  .navbar-logo span {
+    display: none;
+  }
+
+  .navbar-right {
+    gap: 6px;
+  }
+}
