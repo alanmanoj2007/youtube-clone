@@ -28,7 +28,7 @@ function App() {
   };
 
   return (
-    <Router basename="/youtube-clone">
+    <Router>
       <div className="app">
         <Navbar
           onSearch={handleSearch}
